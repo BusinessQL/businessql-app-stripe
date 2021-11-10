@@ -16,20 +16,24 @@ export const removeCustomerHandler = async (
   event: RemoveCustomerEvent,
   context: HandlerContext
 ) => {
-  const { secretKey, customerId } = event.body.payload;
+  try {
+    const { secretKey, customerId } = event.body.payload;
 
-  if (!secretKey) {
-    throw new Error('Missing secretKey');
+    if (!secretKey) {
+      throw new Error('Missing secretKey');
+    }
+
+    if (!customerId) {
+      throw new Error('Missing customerId');
+    }
+
+    const { removed } = await removeCustomer({
+      secretKey,
+      customerId,
+    });
+
+    return context.status(200).succeed({ removed });
+  } catch (error) {
+    return context.status(200).succeed({ removed: false });
   }
-
-  if (!customerId) {
-    throw new Error('Missing customerId');
-  }
-
-  const { removed } = await removeCustomer({
-    secretKey,
-    customerId,
-  });
-
-  return context.status(200).succeed({ removed });
 };

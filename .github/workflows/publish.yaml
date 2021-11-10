@@ -33,4 +33,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: businessql/integration-stripe:0.0.1-alpha
+          tags: businessql/integration-stripe:0.0.2-alpha
