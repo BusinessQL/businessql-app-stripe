@@ -1,22 +1,22 @@
-export type Integration = {
+export type App = {
   id: string;
   accountId: string;
   spaceId: string;
   name: string;
-  type: IntegrationType;
+  type: AppType;
   data: any;
 };
 
-export interface IntegrationType {
+export interface AppType {
   id: string;
   nameId: string;
   name: string;
   data: {
-    displayCategory?: IntegrationTypeDisplayCategory;
+    displayCategory?: AppTypeDisplayCategory;
   };
 }
 
-export type IntegrationTypeDisplayCategory = {
+export type AppTypeDisplayCategory = {
   nameId: string;
   name: string;
 };

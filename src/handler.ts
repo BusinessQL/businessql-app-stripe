@@ -1,4 +1,4 @@
-import { Integration } from './integrations';
+import { App } from './apps';
 import { addCustomerHandler, AddCustomerEvent } from './stripe/add-customer';
 import { customersHandler, CustomersEvent } from './stripe/customers';
 import {
@@ -23,7 +23,7 @@ export interface HandlerEvent {
 export interface EventBody {
   method: string;
   payload?: any;
-  integration?: Integration;
+  app?: App;
 }
 
 export type HandlerContext = {

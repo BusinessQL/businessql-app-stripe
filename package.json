@@ -1,5 +1,5 @@
 {
-  "name": "businessql-integration-stripe",
+  "name": "businessql-app-stripe",
   "version": "0.0.2-alpha",
   "description": "",
   "main": "index.js",

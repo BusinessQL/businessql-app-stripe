@@ -132,8 +132,8 @@ const middleware = async (req, res) => {
 };
 
 app.use('*', (req, res, next) => {
-  res.set('x-bql-integration-name', packageJson.name);
-  res.set('x-bql-integration-version', packageJson.version);
+  res.set('x-bql-app-name', packageJson.name);
+  res.set('x-bql-app-version', packageJson.version);
   next();
 });
 app.post('/*', middleware);
