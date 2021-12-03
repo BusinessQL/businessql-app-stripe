@@ -14,7 +14,6 @@ steps:
     id: deploy-function
     args:
       - gcloud
-      - beta
       - functions
       - deploy
       - ${_FUNCTION_NAME}
@@ -23,7 +22,6 @@ steps:
       - --source=.
       - --trigger-http
       - --runtime=${_RUNTIME}
-      - --min-instances=1
       - --security-level=secure-always
       - --allow-unauthenticated
 
