@@ -1,16 +1,22 @@
 steps:
+  # Deploy function
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    id: deploy-function
     args:
       - gcloud
       - functions
       - deploy
       - ${_FUNCTION_NAME}
+      - --entry-point=${_FUNCTION_ENTRY_POINT}
       - --region=${_REGION}
-      - --source=.
+      - --source=dist
       - --trigger-http
       - --runtime=${_RUNTIME}
+      - --security-level=secure-always
+      - --allow-unauthenticated
 
 substitutions:
   _FUNCTION_NAME: businessql-app-stripe
+  _FUNCTION_ENTRY_POINT: main
   _REGION: us-east4
-  _RUNTIME: nodejs16
+  _RUNTIME: nodejs14
