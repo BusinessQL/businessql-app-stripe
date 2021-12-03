@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm run build && clear && npx functions-framework --target=main --signature-type=http --port=8888",
     "build": "npm-run-all clean tsc",
-    "clean": "rimraf function/*",
+    "clean": "rimraf dist/*",
     "tsc": "tsc --project tsconfig.production.json",
     "prepare": "npm run gcp-build",
     "gcp-build": "npm run build"
