@@ -1,7 +1,0 @@
-src
-cloudbuild.yaml
-tsconfig.*
-.git
-.gcloudignore
-.gitignore
-.prettierrc
