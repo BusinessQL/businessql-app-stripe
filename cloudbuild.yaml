@@ -18,7 +18,7 @@ steps:
       - --allow-unauthenticated
 
 substitutions:
-  _FUNCTION_NAME: businessql-app-stripe
+  _FUNCTION_NAME: stripe
   _FUNCTION_ENTRY_POINT: main
   _REGION: us-east4
   _RUNTIME: nodejs14
