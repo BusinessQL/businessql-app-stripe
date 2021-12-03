@@ -1,0 +1,16 @@
+steps:
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - ${_FUNCTION_NAME}
+      - --region=${_REGION}
+      - --source=.
+      - --trigger-http
+      - --runtime=${_RUNTIME}
+
+substitutions:
+  _FUNCTION_NAME: businessql-app-stripe
+  _REGION: us-east4
+  _RUNTIME: nodejs16
