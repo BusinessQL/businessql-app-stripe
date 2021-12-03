@@ -5,28 +5,29 @@ import { removeCustomerHandler } from './stripe/remove-customer';
 import { updateCustomerHandler } from './stripe/update-customer';
 
 export function main(req: Request, res: Response) {
-  try {
-    const { action } = req.body;
+  res.json({ message: 'test 1' });
+  // try {
+  //   const { action } = req.body;
 
-    switch (action) {
-      case 'getCustomers':
-        return getCustomersHandler(req, res);
+  //   switch (action) {
+  //     case 'getCustomers':
+  //       return getCustomersHandler(req, res);
 
-      case 'addCustomer':
-        return addCustomerHandler(req, res);
+  //     case 'addCustomer':
+  //       return addCustomerHandler(req, res);
 
-      case 'updateCustomer':
-        return updateCustomerHandler(req, res);
+  //     case 'updateCustomer':
+  //       return updateCustomerHandler(req, res);
 
-      case 'removeCustomer':
-        return removeCustomerHandler(req, res);
+  //     case 'removeCustomer':
+  //       return removeCustomerHandler(req, res);
 
-      default:
-        break;
-    }
+  //     default:
+  //       break;
+  //   }
 
-    throw new Error(`Invalid action: ${action}`);
-  } catch (error: any) {
-    return res.status(500).json({ error: error.message || 'Failed' });
-  }
+  //   throw new Error(`Invalid action: ${action}`);
+  // } catch (error: any) {
+  //   return res.status(500).json({ error: error.message || 'Failed' });
+  // }
 }

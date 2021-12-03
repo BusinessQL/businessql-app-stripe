@@ -1,15 +1,5 @@
 steps:
-  # Install dependencies
-  - name: "gcr.io/cloud-builders/npm"
-    id: install-dependencies
-    args: ["install"]
-
-  # Build function
-  - name: "gcr.io/cloud-builders/npm"
-    id: build-function
-    args: ["run", "build"]
-
-    # Deploy function
+  # Deploy function
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     id: deploy-function
     args:
