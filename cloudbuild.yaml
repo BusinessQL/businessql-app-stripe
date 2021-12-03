@@ -4,6 +4,7 @@ steps:
     id: deploy-function
     args:
       - gcloud
+      - beta
       - functions
       - deploy
       - ${_FUNCTION_NAME}
