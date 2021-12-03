@@ -1,1 +1,1 @@
-exports.main = require('./dist').main;
+exports.main = require('./function').main;

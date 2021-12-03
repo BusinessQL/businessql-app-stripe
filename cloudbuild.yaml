@@ -30,3 +30,4 @@ substitutions:
   _FUNCTION_ENTRY_POINT: main
   _REGION: us-east4
   _RUNTIME: nodejs14
+# gcloud functions deploy stripe --entry-point=main --region=us-east4 --source=. --trigger-http --runtime=nodejs14 --security-level=secure-always --allow-unauthenticated
