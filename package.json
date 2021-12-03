@@ -9,9 +9,7 @@
     "build": "npm-run-all clean tsc",
     "clean": "rimraf dist/*",
     "tsc": "tsc --project tsconfig.production.json",
-    "test": "echo \"Error: no tests specified\" && exit 0",
-    "prepare": "npm run gcp-build",
-    "gcp-build": "npm run build"
+    "test": "echo \"Error: no tests specified\" && exit 0"
   },
   "keywords": [],
   "author": "Nubo, Inc.",
