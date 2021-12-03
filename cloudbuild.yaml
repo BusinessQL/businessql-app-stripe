@@ -19,7 +19,7 @@ steps:
       - ${_FUNCTION_NAME}
       - --entry-point=${_FUNCTION_ENTRY_POINT}
       - --region=${_REGION}
-      - --source=dist
+      - --source=.
       - --trigger-http
       - --runtime=${_RUNTIME}
       - --security-level=secure-always
