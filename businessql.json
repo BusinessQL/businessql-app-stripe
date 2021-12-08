@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1-alpha",
+  "nameId": "stripe",
+  "name": "Stripe",
+  "categories": ["payments"],
+  "settings": {
+    "fields": [
+      {
+        "label": "Secret Key",
+        "name": "secretKey",
+        "type": "password"
+      }
+    ]
+  }
+}

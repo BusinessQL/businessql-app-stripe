@@ -1,0 +1,25 @@
+type GetCustomersResponse {
+  customers: JSON!
+}
+
+type AddCustomerResponse {
+  customer: JSON!
+}
+
+type UpdateCustomerResponse {
+  customer: JSON!
+}
+
+type RemoveCustomerResponse {
+  removed: Boolean!
+}
+
+type Query {
+  getCustomers: GetCustomersResponse
+}
+
+type Mutation {
+  addCustomer(name: String!, email: String!): AddCustomerResponse
+  updateCustomer(customerId: String!, data: JSON!): UpdateCustomerResponse
+  removeCustomer(customerId: String!): RemoveCustomerResponse
+}
