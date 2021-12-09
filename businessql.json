@@ -3,9 +3,6 @@
   "nameId": "stripe",
   "name": "Stripe",
   "categories": ["payments"],
-  "api": {
-    "url": "https://us-east4-bql-production.cloudfunctions.net/stripe"
-  },
   "settings": {
     "fields": [
       {
@@ -14,5 +11,11 @@
         "type": "password"
       }
     ]
+  },
+  "api": {
+    "url": "https://us-east4-bql-production.cloudfunctions.net/stripe"
+  },
+  "developer": {
+    "name": "BusinessQL"
   }
 }
