@@ -17,5 +17,11 @@
   },
   "developer": {
     "nameId": "businessql"
+  },
+  "logo": "https://raw.githubusercontent.com/BusinessQL/businessql-app-stripe/main/images/stripe.svg",
+  "theme": {
+    "colors": {
+      "primary": "#6772E5"
+    }
   }
 }
