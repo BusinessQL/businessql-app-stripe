@@ -16,7 +16,6 @@
     "url": "https://us-east4-bql-production.cloudfunctions.net/stripe"
   },
   "developer": {
-    "nameId": "businessql",
-    "name": "BusinessQL"
+    "nameId": "businessql"
   }
 }
