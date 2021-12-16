@@ -9,17 +9,44 @@ type Mutation {
 }
 
 type GetCustomersResponse {
-  customers: JSON!
+  customers: [Customer]!
 }
 
 type AddCustomerResponse {
-  customer: JSON!
+  customer: Customer!
 }
 
 type UpdateCustomerResponse {
-  customer: JSON!
+  customer: Customer!
 }
 
 type RemoveCustomerResponse {
   removed: Boolean!
+}
+
+type Customer {
+  id: ID!
+  object: String!
+  address: JSON
+  balance: Int
+  created: Int!
+  currency: String
+  default_source: String
+  delinquent: Boolean!
+  description: String
+  discount: JSON
+  email: String!
+  invoice_prefix: String
+  invoice_settings: JSON
+  livemode: Boolean
+  metadata: JSON
+  name: String
+  next_invoice_sequence: Int,
+  phone: String
+  preferred_locales: JSON
+  shipping: JSON
+  sources: JSON
+  subscriptions: JSON
+  tax_exempt: String
+  tax_ids: JSON
 }
