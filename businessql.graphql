@@ -1,3 +1,13 @@
+type Query {
+  getCustomers: GetCustomersResponse
+}
+
+type Mutation {
+  addCustomer(name: String!, email: String!): AddCustomerResponse
+  updateCustomer(customerId: String!, data: JSON!): UpdateCustomerResponse
+  removeCustomer(customerId: String!): RemoveCustomerResponse
+}
+
 type GetCustomersResponse {
   customers: JSON!
 }
@@ -12,14 +22,4 @@ type UpdateCustomerResponse {
 
 type RemoveCustomerResponse {
   removed: Boolean!
-}
-
-type Query {
-  getCustomers: GetCustomersResponse
-}
-
-type Mutation {
-  addCustomer(name: String!, email: String!): AddCustomerResponse
-  updateCustomer(customerId: String!, data: JSON!): UpdateCustomerResponse
-  removeCustomer(customerId: String!): RemoveCustomerResponse
 }

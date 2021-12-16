@@ -1,0 +1,13 @@
+[query]
+  # get customers
+  [query.getCustomers]
+  type = "api"
+  url = "https://api.stripe.com/v1/customers"
+  method = "GET"
+
+    [query.getCustomers.headers]
+    Authorization = "Bearer {data.secretKey}"      
+
+    [query.getCustomers.response]
+      [query.getCustomers.response.success]
+      customers = "{{result.data}}"

@@ -1,0 +1,17 @@
+name = "Stripe"
+nameId = "stripe"
+categories = ["payments"]
+version = "0.0.1-alpha"
+logo = "https://raw.githubusercontent.com/BusinessQL/businessql-app-stripe/main/images/logo.svg"
+
+[settings]
+  [[settings.fields]]
+  label = "Secret Key"
+  name = "secretKey"
+  type = "password"
+
+[developer]
+nameId = "businessql"
+
+[theme.colors]
+primary = "#6772E5"
