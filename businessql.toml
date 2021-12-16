@@ -1,7 +1,7 @@
 name = "Stripe"
 nameId = "stripe"
 categories = ["payments"]
-version = "0.0.3-alpha"
+version = "0.0.4-alpha"
 logo = "https://raw.githubusercontent.com/BusinessQL/businessql-app-stripe/main/images/logo.svg"
 
 [settings]

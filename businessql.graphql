@@ -1,5 +1,5 @@
 type Query {
-  getCustomers(limit: Int): GetCustomersResponse
+  getCustomers(limit: Int, startingAfter: String, endingBefore: String): GetCustomersResponse
 }
 
 type Mutation {
