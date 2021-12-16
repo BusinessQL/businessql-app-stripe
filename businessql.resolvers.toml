@@ -2,7 +2,7 @@
   # get customers
   [query.getCustomers]
   type = "api"
-  url = "https://api.stripe.com/v1/customers?limit={args.limit|25}&starting_after={args.startingAfter}&ending_before={args.endingBefore}"
+  url = "https://api.stripe.com/v1/customers?limit={args.limit|25}"
   method = "GET"
 
     [query.getCustomers.headers]
